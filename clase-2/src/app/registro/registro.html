@@ -1,0 +1,22 @@
+<!-- 
+    Conectar nuestro formulario a la propiedad del componente registroForm
+-->
+<form [formGroup]="registroForm" (submit)="handleSubmit()">
+    <div>
+        <label>Nombre:</label>
+        <input type="text" formControlName="nombre">
+        <!-- Quiero que se muestre este texto de fallo si el usuario no escribe nada en el campo de nombre -->
+        <span class="error-txt" *ngIf="registroForm.get('nombre')?.hasError('required')">
+            El campo de nombre es obligatorio
+        </span>
+    </div>
+    <div>
+        <label>Email:</label>
+        <input type="email" formControlName="email">
+    </div>
+    <div>
+        <label>Mensaje:</label>
+        <textarea type="mensaje" formControlName="mensaje"></textarea>
+    </div>
+    <button type="submit">Enviar formulario</button>
+</form>
