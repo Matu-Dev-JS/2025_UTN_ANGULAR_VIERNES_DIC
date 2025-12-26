@@ -13,7 +13,7 @@ export class ChatService {
 
   /* CARGA DATOS mook (de prueba) */
   private createMook (): Chat[]{
-    const now = new Date().toISOString
+    const now = new Date().toISOString()
     return [
       {
         id: '1',
@@ -24,13 +24,13 @@ export class ChatService {
             id: '1',
             text: 'Hola!', 
             fromMe: false, 
-            date: now()
+            date: now
           },
           {
             id: '2',
             text: 'Que tal?', 
             fromMe: true, 
-            date: now()
+            date: now
           }
         ]
       }
